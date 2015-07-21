@@ -25,4 +25,8 @@
     <style name="CustomDetail" parent="TextAppearance.ShowcaseView.Detail">
         <item name="android:textColor">@color/white</item>
     </style>
+
+    <dimen name="showcase_radius">20dp</dimen>
+    <dimen name="showcase_radius_inner">26dp</dimen>
+    <dimen name="showcase_radius_outer">40dp</dimen>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.dheeraj.guidedtourdemo;
 
+import android.content.res.TypedArray;
+import android.support.annotation.DimenRes;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,20 +26,13 @@ public class MainActivity extends ActionBarActivity {
         Button button1 = (Button) findViewById(R.id.test1);
 
 
-        new ShowcaseView.Builder(this)
+        ShowcaseView showcaseView = new ShowcaseView.Builder(this)
                 .setTarget(new ViewTarget(((ViewGroup) findViewById(R.id.action_bar)).getChildAt(0) /*button*/))
                 .setContentTitle("ShowcaseView")
                 .setContentText("This is highlighting the Home button")
                 .hideOnTouchOutside().setStyle(R.style.CustomShowcaseTheme)
-                .build().setPadding(0,0,0,100);
-
- /*       new ShowcaseView.Builder(this)
-                .setTarget( new ViewTarget( *//*((ViewGroup)findViewById(R.id.action_bar)).getChildAt(0)*//* button1 ) )
-                .setContentTitle("ShowcaseView1")
-                .setContentText("This is highlighting the Home button1")
-                .hideOnTouchOutside()
-                .build();*/
-
+                .build();
+        showcaseView.setPadding(0, 0, 0, 100);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
